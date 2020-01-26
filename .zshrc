@@ -32,7 +32,7 @@ plugins=(
 	dotenv
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-	zsh-apple-touchbar
+#	zsh-apple-touchbar
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -62,9 +62,6 @@ eval $(thefuck --alias)
 unsetopt inc_append_history
 unsetopt share_history
 
-# Set default user
-DEFAULT_USER="wjohnson"
-
 # Open editor to edit this config file
 alias zshconfig="micro ~/dotfiles/.zshrc"
 
@@ -86,4 +83,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
 
 # Load machine specific .zshrc (this should be made so it wont source itself and cause infinite loop)
-source ~/.custom.zshrc
+[ -f ~/.custom.zshrc ] || echo 'do it' && source ~/.custom.zshrc
