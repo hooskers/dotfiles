@@ -82,5 +82,14 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Whether to add newline to spaceship theme's prompt
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
 
+# Hide spaceship theme's package version prompt
+export SPACESHIP_PACKAGE_SHOW=false
+
+# Hide spaceship theme's docker version prompt
+export SPACESHIP_DOCKER_SHOW=false
+
+# Change spaceship theme's prefix string
+export SPACESHIP_PROMPT_PREFIXES_SHOW=false
+
 # Load machine specific .zshrc (this should be made so it wont source itself and cause infinite loop)
 [ -f ~/.custom.zshrc ] || echo 'do it' && source ~/.custom.zshrc
