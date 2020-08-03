@@ -55,15 +55,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#fuck
-eval $(thefuck --alias)
-
 # Stop history from populating in other tabs
 unsetopt inc_append_history
 unsetopt share_history
 
 # Open editor to edit this config file
 alias zshconfig="micro ~/dotfiles/.zshrc"
+
+# Open editor to edit local config file
+alias zshconfig_local="micro ~/.custom.zshrc"
 
 # Delete local git branches that were once tracking a remote branch that is now deleted
 # source: https://stackoverflow.com/a/56609356
